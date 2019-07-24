@@ -7,7 +7,6 @@ protected:
 	int _size;
 
 public:
-	int qwe ;
 	String() {
 		pStr = NULL;
 		_size = 0;
@@ -17,12 +16,8 @@ public:
 		pStr = new char[_size];
 		strcpy_s(pStr,this->_size, str);
 	}
-	String(const String& str) : pStr(str.pStr), _size(str._size) { 
-		++qwe;
-	}
 	int size();
 	void clear();
-	int getA() { return this->qwe; }
 	const String &operator = (const String & obj);
 	const String& operator - (const String &obj);
 	const bool operator > (const String &str);
